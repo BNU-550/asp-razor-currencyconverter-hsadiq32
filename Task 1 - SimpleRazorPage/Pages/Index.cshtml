@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{ ViewData["Title"] = "Home page"; }
+<header class="text-center">
+    <h1 class="display-4">Email Register</h1>
+    <h2>by @Model.FullName</h2>
+    <hr />
+</header>
+<form method="post" class="mx-auto" style="width:200px">
+    <p>
+        <label>Name</label><br />
+        <input type="text" asp-for="FullName" required="true">
+    </p>
+    <p>
+        <label>Email</label><br />
+        <input type="email" name="email" required="true">
+    </p>
+    <p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </p>
+    <p>
+        @ViewData["Message"]
+    </p>
+</form>
